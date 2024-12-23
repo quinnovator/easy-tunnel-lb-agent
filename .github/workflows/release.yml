@@ -40,9 +40,9 @@ jobs:
 
       - name: Build Release Binaries
         run: |
-          GOOS=linux GOARCH=amd64 go build -o easy-tunnel-lb-agent-linux-amd64 ../cmd/main.go
-          GOOS=darwin GOARCH=amd64 go build -o easy-tunnel-lb-agent-darwin-amd64 ../cmd/main.go
-          GOOS=darwin GOARCH=arm64 go build -o easy-tunnel-lb-agent-darwin-arm64 ../cmd/main.go
+          GOOS=linux GOARCH=amd64 go build -o easy-tunnel-lb-agent-linux-amd64 ../cmd
+          GOOS=darwin GOARCH=amd64 go build -o easy-tunnel-lb-agent-darwin-amd64 ../cmd
+          GOOS=darwin GOARCH=arm64 go build -o easy-tunnel-lb-agent-darwin-arm64 ../cmd
 
       - name: Generate Release Tag
         id: tag
